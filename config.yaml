@@ -1,0 +1,10 @@
+#阿里云key——id
+access_key_id:
+#阿里云secret
+access_secret:
+#需要设置DNS的域名
+dns_domain: test.api
+#阿里云一级域名
+aliyun_domain: cybeor.com
+#获取公网ip的域名,链接可能会挂掉需要更换
+curl_domain: vip.linux-code.com
