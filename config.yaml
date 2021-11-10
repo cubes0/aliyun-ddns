@@ -1,10 +1,14 @@
-#阿里云key——id
+#阿里云key_id(example-->access_key_id: LT.....ScPwrV.....45nd5S)
 access_key_id:
-#阿里云secret
+
+#阿里云secret(example-->access_secret: WVPJ.....OVwqE........Zvsfp6..)
 access_secret:
-#需要设置DNS的域名
-dns_domain: test.api
-#阿里云一级域名
-aliyun_domain: cybeor.com
-#获取公网ip的域名,链接可能会挂掉需要更换
-curl_domain: vip.linux-code.com
+
+#需要设置DNS的子域名前缀(example-->dns_domain: test.api)
+dns_domain:
+
+#阿里云一级主域名(example-->aliyun_domain: cybeor.com)
+aliyun_domain:
+
+#获取公网ip的域名,链接可能会挂掉需要更换(example-->curl_domain: vip.linux-code.com)
+curl_domain:
