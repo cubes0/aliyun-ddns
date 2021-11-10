@@ -49,6 +49,7 @@ func GetWanIP() (wanIp string) {
 
 func CreateNewAliDns() {
 	var request *alidns.AddDomainRecordRequest
+	var response *alidns.AddDomainRecordResponse
 	client, err := alidns.NewClientWithAccessKey("cn-hangzhou", c.AccessKeyId, c.AccessSecret)
 
 	request = alidns.CreateAddDomainRecordRequest()
@@ -59,7 +60,9 @@ func CreateNewAliDns() {
 	request.DomainName = c.AliyunDomain
 
 	if client != nil {
-		_, err = client.AddDomainRecord(request)
+		response, err = client.AddDomainRecord(request)
+		log.Println("CreateNewRecord-->Success")
+		log.Println(response)
 	}
 
 	if err != nil {
@@ -120,6 +123,7 @@ func UpdateDNS(recordId string) error {
 
 	if client != nil {
 		response, err = client.UpdateDomainRecord(request)
+		log.Println("UpdateRecord-->Success")
 		log.Println(response)
 	}
 
